@@ -1,0 +1,33 @@
+<div>
+	<%= form_for @user, url: {action: 'create'} do |f| %>
+
+		<%= f.label :fullname%>
+		<%= f.text_field :fullname %>
+
+		<%= f.label :screen_name%>
+		<%= f.text_field :screen_name %>
+
+		<%= f.label :password %>
+		<%= f.password_field :password %>
+
+		<%= f.label :bio %>
+		<%= f.text_field :bio %>
+
+		<%= f.label :rating %>
+		<%= f.text_field :rating %>
+
+		<%= f.label :zipcode %>
+		<%= f.text_field :zipcode %>
+
+		<%= f.label :age %>
+		<%= f.text_field :age %>
+
+		<%= f.label :gender %>
+		<%= f.text_field :gender %>
+
+		<%= f.label :handed %>
+		<%= f.text_field :handed %>
+
+		<%= f.submit 'Register' %>
+	<% end %>
+</div>
