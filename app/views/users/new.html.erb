@@ -1,33 +1,53 @@
 <div>
 	<%= form_for @user, url: {action: 'create'} do |f| %>
 
-		<%= f.label :fullname%>
-		<%= f.text_field :fullname %>
+		<p>
+			<%= f.label :fullname%>
+			<%= f.text_field :fullname %>
+		</p>
 
-		<%= f.label :screen_name%>
-		<%= f.text_field :screen_name %>
+		<p>
+			<%= f.label :screen_name%>
+			<%= f.text_field :screen_name %>
+		</p>
 
-		<%= f.label :password %>
-		<%= f.password_field :password %>
+		<p>
+			<%= f.label :password %>
+			<%= f.password_field :password %>
+		</p>
 
-		<%= f.label :bio %>
-		<%= f.text_field :bio %>
+		<p>
+			<%= f.label :bio %>
+			<%= f.text_field :bio %>
+		</p>
 
-		<%= f.label :rating %>
-		<%= f.text_field :rating %>
+		<p>
+			<%= f.label :rating %>
+			<%= f.text_field :rating %>
+		</p>
 
-		<%= f.label :zipcode %>
-		<%= f.text_field :zipcode %>
+		<p>
+			<%= f.label :zipcode %>
+			<%= f.text_field :zipcode %>
+		</p>
 
-		<%= f.label :age %>
-		<%= f.text_field :age %>
+		<p>
+			<%= f.label :age %>
+			<%= f.text_field :age %>
+		</p>
 
-		<%= f.label :gender %>
-		<%= f.text_field :gender %>
+		<p>
+			<%= f.label :gender %>
+			<%= f.text_field :gender %>
+		</p>
 
-		<%= f.label :handed %>
-		<%= f.text_field :handed %>
+		<p>
+			<%= f.label :handed %>
+			<%= f.text_field :handed %>
+		</p>
 
-		<%= f.submit 'Register' %>
+		<p>
+			<%= f.submit 'Register' %>
+		</p>
 	<% end %>
 </div>
