@@ -42,6 +42,8 @@ Rails.application.configure do
   # number of complex assets.
   config.assets.debug = true
 
+  config.active_record.time_zone_aware_types = [:datetime]
+
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
