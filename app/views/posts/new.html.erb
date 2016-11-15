@@ -1,14 +1,22 @@
 <h1>Create a new post</h1>
-<%= form_for @post, url: { action: 'create' } do |f| %>
+<%= form_for :post, url: posts_path do |f| %>
+  <% if @post.errors.any? %>
+    <h3><%= pluralize(@post.errors.count, "error") %> prevented this post from saving!</h3>
+    <% @post.errors.full_messages.each do |error| %>
+      <p><%= error %></p>
+    <% end %>
+  <% end %>
   <p>
     <%= f.label :title %>
     <%= f.text_field :title %>
   </p>
+
   <p>
     <%= f.label :body %>
     <%= f.text_area :body %>
   </p>
+
   <p>
-    <%= f.submit 'Save' %>
+    <%= f.submit "Save" %>
   </p>
 <% end %>
