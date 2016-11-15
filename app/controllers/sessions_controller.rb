@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
 
   include UsersHelper
-  
+
   def new
     @user = User.new
     if logged_in?
@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.find_by(email: parsms[:email])
+    @user = User.find_by(email: params[:email])
     if @user && @user.authenticate(params[password])
       session[:user_id] = @user.id
       redirect_to root_path
