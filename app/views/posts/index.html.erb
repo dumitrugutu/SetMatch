@@ -1,5 +1,8 @@
 <%= link_to 'sign in', new_session_path %> |
-<%= link_to 'register', new_user_path %>
+<%= link_to 'register', new_user_path %> |
+<%= link_to 'logout', logout_path %>
+
+<h3><%= link_to 'Create a post', new_post_path %></h3>
 
 <% if @posts %>
   <% @posts.each do |post| %>
