@@ -1,6 +1,10 @@
-<%= link_to 'sign in', new_session_path %> |
-<%= link_to 'register', new_user_path %> |
-<%= link_to 'logout', logout_path %>
+<% if logged_in? %>
+  <%= link_to 'logout', logout_path %>
+  <h3>Welcome back, <%= current_user.screen_name %>!</h3>
+<% else %>
+  <%= link_to 'sign in', new_session_path %> |
+  <%= link_to 'register', new_user_path %>
+<% end %>
 
 <h3><%= link_to 'Create a post', new_post_path %></h3>
 
