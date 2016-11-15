@@ -1,4 +1,7 @@
 class SessionsController < ApplicationController
+
+  include UsersHelper
+  
   def new
     @user = User.new
     if logged_in?
