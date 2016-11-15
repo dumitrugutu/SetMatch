@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+
+  include UsersHelper
+
   def index
     @posts = Post.all.order('created_at DESC')
   end
@@ -9,6 +12,8 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    # use the id of the signed in user to create a post
+    @post.user = current_user if current_user
     if @post.save
       redirect_to posts_path
     else
