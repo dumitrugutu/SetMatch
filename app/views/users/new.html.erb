@@ -1,6 +1,15 @@
 <div>
 	<%= form_for @user, url: {action: 'create'} do |f| %>
-
+		<% if @user.errors.any? %>
+			<h3><%= pluralize(@user.errors.count, "error") %> prevented this post from saving!</h3>
+			<% @user.errors.full_messages.each do |error| %>
+				<p><%= error %></p>
+			<% end %>
+		<% end %>
+		<p>
+			<%= f.label :email %>
+			<%= f.text_field :email %>
+		</p>
 		<p>
 			<%= f.label :fullname%>
 			<%= f.text_field :fullname %>
