@@ -12,6 +12,6 @@
   <% @posts.each do |post| %>
     <h1><%= link_to post.title, post_path(post) %></h1>
     <p><%= post.body %></p>
-    <p><%= post.created_at.strftime("%B, %d, %Y")%></p>
+    <p>Posted <%= time_ago_in_words(post.created_at) %> ago</p>
   <% end %>
 <% end %>
