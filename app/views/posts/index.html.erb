@@ -12,6 +12,9 @@
   <% @posts.each do |post| %>
     <h1><%= link_to post.title, post_path(post) %></h1>
     <p><%= post.body %></p>
-    <p><%= post.created_at.strftime("%B, %d, %Y")%></p>
+    <% if post.date != nil %>
+      <p><%= post.date.strftime("%A, %B %d, %Y") %></p>
+    <% end %>
+    <p><%= post.created_at.strftime("%A, %d, %Y")%></p>
   <% end %>
 <% end %>
