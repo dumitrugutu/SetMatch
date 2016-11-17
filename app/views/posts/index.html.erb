@@ -1,14 +1,98 @@
 <h3><%= link_to 'Create a post', new_post_path %></h3>
-
-<div class="">
-  <% if @posts %>
-    <% @posts.each do |post| %>
-      <h1><%= link_to post.title, post_path(post) %></h1>
-      <p><%= post.body %></p>
-      <% if post.date != nil %>
-        <p><%= post.date.strftime("%A, %B %d, %Y") %></p>
-      <% end %>
-      <p><%= post.created_at.strftime("%A, %d, %Y")%></p>
+<section class="monday">
+  <div>
+    <% if !@mondays.empty? %>
+      <h4><%= @mondays.first.date.strftime("%A, %B %d, %Y") %></h4>
     <% end %>
-  <% end %>
-</div>
+  </div>
+  <div>
+    <% @mondays.each do |post| %>
+      <h4><%= link_to post.title, post_path(post) %></h4>
+      <p><%= post.body %></p>
+    <% end %>
+  </div>
+</section>
+
+<section class="tuesday">
+  <div>
+    <% if !@tuesdays.empty? %>
+      <h4><%= @tuesdays.first.date.strftime("%A, %B %d, %Y") %></h4>
+    <% end %>
+  </div>
+  <div>
+    <% @tuesdays.each do |post| %>
+      <h4><%= link_to post.title, post_path(post) %></h4>
+      <p><%= post.body %></p>
+    <% end %>
+  </div>
+</section>
+
+<section class="wednesday">
+  <div>
+    <% if !@wednesdays.empty? %>
+    <h4><%= @wednesdays.first.date.strftime("%A, %B %d, %Y") %></h4>
+    <% end %>
+  </div>
+  <div>
+    <% @wednesdays.each do |post| %>
+      <h4><%= link_to post.title, post_path(post) %></h4>
+      <p><%= post.body %></p>
+    <% end %>
+  </div>
+</section>
+
+<section class="thursday">
+  <div>
+    <% if !@thursdays.empty? %>
+      <h4><%= @thursdays.first.date.strftime("%A, %B %d, %Y") %></h4>
+    <% end %>
+  </div>
+  <div>
+    <% @thursdays.each do |post| %>
+      <h4><%= link_to post.title, post_path(post) %></h4>
+      <p><%= post.body %></p>
+    <% end %>
+  </div>
+</section>
+
+<section class="friday">
+  <div>
+    <% if !@fridays.empty? %>
+      <h4><%= @fridays.first.date.strftime("%A, %B %d, %Y") %></h4>
+    <% end %>
+  </div>
+  <div>
+    <% @fridays.each do |post| %>
+      <h4><%= link_to post.title, post_path(post) %></h4>
+      <p><%= post.body %></p>
+    <% end %>
+  </div>
+</section>
+
+<section class="saturday">
+  <div>
+    <% if !@saturdays.empty? %>
+      <h4><%= @saturdays.first.date.strftime("%A, %B %d, %Y") %></h4>
+    <% end %>
+  </div>
+  <div>
+    <% @saturdays.each do |post| %>
+      <h4><%= link_to post.title, post_path(post) %></h4>
+      <p><%= post.body %></p>
+    <% end %>
+  </div>
+</section>
+
+<section class="sunday">
+  <div>
+    <% if !@sundays.empty? %>
+      <h4><%= @sundays.first.date.strftime("%A, %B %d, %Y") %></h4>
+    <% end %>
+  </div>
+  <div>
+    <% @sundays.each do |post| %>
+      <h4><%= link_to post.title, post_path(post) %></h4>
+      <p><%= post.body %></p>
+    <% end %>
+  </div>
+</section>
