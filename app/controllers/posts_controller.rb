@@ -1,7 +1,5 @@
 class PostsController < ApplicationController
 
-  include UsersHelper
-
   def index
     all_posts = Post.all
     @mondays = all_posts.select { |post| post.date.strftime("%A") == "Monday" if post.date }
