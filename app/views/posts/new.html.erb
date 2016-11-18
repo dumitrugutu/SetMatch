@@ -1,39 +1,49 @@
 <h1>Create a new post</h1>
-<%= form_for :post, url: posts_path do |f| %>
-  <% if @post.errors.any? %>
-    <h3><%= pluralize(@post.errors.count, "error") %> prevented this post from saving!</h3>
-    <% @post.errors.full_messages.each do |error| %>
-      <p><%= error %></p>
+<div class="row">
+  <%= form_for :post, url: posts_path do |f| %>
+    <% if @post.errors.any? %>
+      <h3><%= pluralize(@post.errors.count, "error") %> prevented this post from saving!</h3>
+      <% @post.errors.full_messages.each do |error| %>
+        <p><%= error %></p>
+      <% end %>
     <% end %>
+    <div class="row">
+      <div class="col-sm-8 inline-form col-md-offset-2">
+        <%= f.label :title %>
+        <%= f.text_field :title, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-8 inline-form col-md-offset-2">
+        <%= f.label "Description" %>
+        <%= f.text_area :body, class: "form-control", rows: 3 %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-8 inline-form col-md-offset-2">
+        <div class="col-xs-4">
+          <%= f.label :date %>
+          <%= f.date_field :date, class: "form-control" %>
+        </div>
+
+        <div class="col-xs-4">
+          <%= f.label :start_time %>
+          <%= f.time_field :start_time, class: "form-control" %>
+        </div>
+
+        <div class="col-xs-4">
+          <%= f.label :end_time %>
+          <%= f.time_field :end_time, class: "form-control" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+	    <div class="col-sm-offset-2 col-sm-10">
+				<%= f.submit 'Save', class: "btn btn-primary" %>
+	    </div>
+	  </div>
   <% end %>
-
-  <p>
-    <%= f.label :date %>
-    <%= f.date_field :date %>
-  </p>
-
-  <p>
-    <%= f.label :start_time %>
-    <%= f.time_field :start_time %>
-  </p>
-
-  <p>
-    <%= f.label :end_time %>
-    <%= f.time_field :end_time %>
-  </p>
-
-  <p>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </p>
-
-  <p>
-    <%= f.label :body %>
-    <%= f.text_area :body %>
-    
-  </p>
-
-  <p>
-    <%= f.submit "Save" %>
-  </p>
-<% end %>
+</div>
