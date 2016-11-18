@@ -1,7 +1,5 @@
 class SessionsController < ApplicationController
 
-  include UsersHelper
-
   def new
     @user = User.new
     if logged_in?
@@ -12,7 +10,8 @@ class SessionsController < ApplicationController
   def create
     @user = User.find_by(email: params[:session][:email])
     if @user && @user.authenticate(params[:session][:password])
-      session[:user_id] = @user.id
+      log_in(@user)
+      flash[:notice] = "You have signed in successfully!"
       redirect_to root_path
     else
       @alert = "Incorrect email or password"
@@ -21,7 +20,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session[:user_id] = nil
+    log_out
     redirect_to root_path
   end
 end
