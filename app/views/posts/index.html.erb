@@ -1,20 +1,14 @@
-<% if logged_in? %>
-  <%= link_to 'logout', logout_path %>
-  <h3>Welcome back, <%= current_user.screen_name %>!</h3>
-<% else %>
-  <%= link_to 'sign in', new_session_path %> |
-  <%= link_to 'register', new_user_path %>
-<% end %>
-
 <h3><%= link_to 'Create a post', new_post_path %></h3>
 
-<% if @posts %>
-  <% @posts.each do |post| %>
-    <h1><%= link_to post.title, post_path(post) %></h1>
-    <p><%= post.body %></p>
-    <% if post.date != nil %>
-      <p><%= post.date.strftime("%A, %B %d, %Y") %></p>
+<div class="">
+  <% if @posts %>
+    <% @posts.each do |post| %>
+      <h1><%= link_to post.title, post_path(post) %></h1>
+      <p><%= post.body %></p>
+      <% if post.date != nil %>
+        <p><%= post.date.strftime("%A, %B %d, %Y") %></p>
+      <% end %>
+      <p><%= post.created_at.strftime("%A, %d, %Y")%></p>
     <% end %>
-    <p><%= post.created_at.strftime("%A, %d, %Y")%></p>
   <% end %>
-<% end %>
+</div>

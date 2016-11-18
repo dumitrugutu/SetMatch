@@ -3,12 +3,28 @@
   <head>
     <title>Setmatch</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <%= link_to "SetMatch", root_path, id: "logo" %>
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <% if logged_in? %>
+              <li><%= link_to current_user.fullname.downcase %></li>
+              <li><%= link_to "home", root_path %></li>
+              <li><%= link_to 'logout', logout_path %></li>
+            <% else %>
+              <li><%= link_to "sign in", new_session_path %></li>
+              <li><%= link_to "sign up", new_user_path %></li>
+            <% end %>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <%= yield %>
   </body>
 </html>
