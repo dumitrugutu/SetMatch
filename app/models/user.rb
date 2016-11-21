@@ -1,9 +1,14 @@
 class User < ApplicationRecord
   has_many :posts
 
-  has_secure_password
+  before_save { self.email = email.downcase }
+  validates :fullname, presence: "must be present", uniqueness: true,
+                       length: { maximum: 50 }
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  validates :email, presence: "must be present", length: { maximum: 255 },
+                    uniqueness: { case_sensitive: false },
+                    format: { with: VALID_EMAIL_REGEX }
 
-  validates :fullname, presence: "must be present", uniqueness: true
-  validates :email, presence: "must be present", uniqueness: true
-  validates :password, presence: "must be present"
+  has_secure_password
+  validates :password, presence: "must be present", length: { minimum: 6 }
 end
