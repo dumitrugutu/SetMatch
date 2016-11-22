@@ -1,11 +1,11 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:300italic,700italic,300,700);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
 /* universal */
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 300;
   color: #555;
@@ -39,6 +39,7 @@ header#index-page {
 /* main section */
 
 section.main {
+  position: relative;
   height: 500px;
   background: url(http://placehold.it/1200x500) no-repeat center bottom;
 }
@@ -46,7 +47,15 @@ section.main {
 section.main a {
   margin-top: 30px;
   position: absolute;
-  left: 45%;
+  top: 55%;
+  left: 40%;
+  font-weight: bold;
+  background-color: #3FFF78;
+  padding: 10px 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
 }
 
 #logo {
