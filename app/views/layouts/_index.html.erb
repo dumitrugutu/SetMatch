@@ -1,6 +1,6 @@
 <header id="index-page">
   <div class="container">
-    <%= link_to "SetMatch", root_path, id: "logo" %>
+    <span><%= link_to "", root_path, class: "logo" %></span>
     <nav>
       <ul>
         <% if logged_in? %>
@@ -25,6 +25,6 @@
 </header>
 <section class="main">
   <div>
-    <%= link_to "Get Started", new_post_path %>
+    <%= link_to "Get Started", new_post_path, class: "btn" %>
   </div>
 </section>
