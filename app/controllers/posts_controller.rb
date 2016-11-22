@@ -12,7 +12,11 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
+    if logged_in?
+      @post = Post.new
+    else
+      render 'sessions/new'
+    end
   end
 
   def create
