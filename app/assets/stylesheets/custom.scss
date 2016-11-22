@@ -72,6 +72,11 @@ nav.index-page ul li a {
   color: #fff;
   text-decoration: none;
   padding: 10px 15px;
+  width: 100px;
+}
+
+nav.index-page ul li a:hover {
+  color: #ACFF50;
 }
 
 nav.index-page > ul {
@@ -80,6 +85,10 @@ nav.index-page > ul {
 
 nav.index-page > ul > li {
   float: left;
+}
+
+nav.index-page > ul > li > a {
+  width: auto;
 }
 
 nav.index-page ul ul {
@@ -100,8 +109,9 @@ section.main {
 }
 
 section a.btn {
-  margin-top: 30px;
-  position: relative;
+  position: absolute;
+  top: 60%;
+  margin-left: -100px;
   font-weight: bold;
   background-color: #ACFF60;
   padding: 10px 25px;
