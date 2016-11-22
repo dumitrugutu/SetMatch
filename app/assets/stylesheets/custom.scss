@@ -1,29 +1,53 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300italic,700italic,300,700);
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
 /* universal */
 
 body {
-  padding-top: 60px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #555;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
-  margin-bottom: 10px;
-}
-
-/* typography */
-
-h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 1em 0;
+  font-size: 2.8em;
+  font-weight: 700;
   line-height: 1;
+  letter-spacing: -2px;
 }
 
-h1 {
-  font-size: 3em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
+p {
+  margin: 0 0 1em 0;
 }
+
+a { color: #007eff; }
+a:visited { color: #65b1ff; }
 
 /* header */
+
+header#index-page {
+  height: 430px;
+  background: url(http://placehold.it/1200x450) no-repeat center bottom;
+  border-bottom: 18px solid black;
+}
+
+/* main section */
+
+section.main {
+  height: 500px;
+  background: url(http://placehold.it/1200x500) no-repeat center bottom;
+}
+
+section.main a {
+  margin-top: 30px;
+  position: absolute;
+  left: 45%;
+}
 
 #logo {
   float: left;
@@ -44,7 +68,6 @@ h1 {
 /* footer */
 
 footer {
-  margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: #777;
@@ -61,13 +84,6 @@ footer a:hover {
 footer ul {
   float: right;
   list-style: none;
-}
-
-footer ul li {
-  float: left;
-  list-style-type: none;
-  display: inline-block;
-  margin-left: 15px;
 }
 
 /* flash */
