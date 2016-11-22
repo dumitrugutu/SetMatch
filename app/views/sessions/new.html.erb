@@ -1,22 +1,22 @@
 <%= render 'layouts/header' %>
 
-<h1>Sign in</h1>
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <%= form_for(:session, url: login_path) do |f| %>
-      <% if @alert %>
-        <h3><%= @alert %></h3>
+<section class="main">
+  <h1>Sign in</h1>
+  <div class="sign-in-form">
+      <%= form_for(:session, url: login_path) do |f| %>
+        <% if @alert %>
+          <h3><%= @alert %></h3>
+        <% end %>
+
+        <%= f.label :email %>
+        <%= f.email_field :email, class: "email" %>
+
+        <%= f.label :password %>
+        <%= f.password_field :password, class: "password" %>
+
+        <%= f.submit "sign in", class: "sign-in" %>
       <% end %>
 
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
-
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
-
-      <%= f.submit "sign in", class: "btn btn-primary" %>
-    <% end %>
-
-    <p>New user? <%= link_to "Sign up now!", new_user_path %></p>
+      <p>New user? <%= link_to "Sign up now!", new_user_path %></p>
   </div>
-</div>
+</section>
