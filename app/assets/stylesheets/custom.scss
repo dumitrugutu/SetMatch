@@ -42,9 +42,55 @@ header a.logo {
   background: url(logo_300x200.png) no-repeat;
   background-size: contain;
   margin: 0 auto;
+  z-index: 1;
 }
 
-/* main section */
+/* Navigation */
+
+nav.index-page {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 200px 0 0 0;
+  width: 100%;
+}
+
+nav.index-page::after {
+  content: '';
+  display: block;
+}
+
+nav.index-page ul {
+  list-style: none;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+}
+
+nav.index-page ul li a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+nav.index-page > ul {
+  padding-left: 27%;
+}
+
+nav.index-page > ul > li {
+  float: left;
+}
+
+nav.index-page ul ul {
+  display: none;
+}
+
+nav.index-page ul li:hover > ul {
+  display: block;
+}
+
+/* Main section */
 
 section.main {
   position: relative;
