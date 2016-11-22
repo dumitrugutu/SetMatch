@@ -2,6 +2,10 @@
 
 /* universal */
 
+html {
+  margin: 0 auto;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
@@ -26,7 +30,27 @@ p {
 a { color: #007eff; }
 a:visited { color: #65b1ff; }
 
-/* header */
+/* Header */
+
+header {
+  height: 150px;
+  background-color: #000;
+  position: relative;
+}
+
+header a.main-logo {
+  position: absolute;
+  display: block;
+  width: 150px;
+  height: 150px;
+  background: url(logo1.png) no-repeat 0 0;
+  background-size: contain;
+  top: 5px;
+  left: 20px;
+  z-index: 1;
+}
+
+/* Index Header */
 
 header#index-page {
   height: 430px;
@@ -46,6 +70,50 @@ header a.logo {
 }
 
 /* Navigation */
+
+nav {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 85px 0 0 0 ;
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+nav ul li a {
+  display: inline-block;
+  color: #fff;
+  padding: 10px 10px;
+  text-decoration: none;
+  width: auto;
+  position: relative;
+  text-transform: uppercase;
+  font-size: .8em;
+  letter-spacing: -1;
+}
+
+nav ul li a:visited {
+  color: #fff;
+}
+
+nav ul li a:hover {
+  color: #ACFF60;
+}
+
+nav > ul {
+  padding-left: 50%;
+}
+
+nav > ul > li {
+  float: left;
+}
+
+/* Index Navigation */
 
 nav.index-page {
   position: absolute;
