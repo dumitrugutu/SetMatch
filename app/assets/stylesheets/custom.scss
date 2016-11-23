@@ -53,9 +53,10 @@ header a.main-logo {
 /* Index Header */
 
 header#index-page {
-  height: 430px;
-  background: url(http://placehold.it/1200x450) no-repeat center bottom;
+  height: 450px;
+  background: url(banner_1200x450.jpg) no-repeat center bottom;
   border-bottom: 18px solid black;
+  width: 100%;
 }
 
 header a.logo {
@@ -120,7 +121,7 @@ nav.index-page {
   position: absolute;
   top: 0px;
   left: 0px;
-  padding: 200px 0 0 0;
+  padding: 150px 0 0 0;
   width: 100%;
 }
 
@@ -149,7 +150,7 @@ nav.index-page ul li a:hover {
 }
 
 nav.index-page > ul {
-  padding-left: 27%;
+  padding-left: 24%;
 }
 
 nav.index-page > ul > li {
