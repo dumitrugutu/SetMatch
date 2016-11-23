@@ -47,6 +47,7 @@ header a.main-logo {
   background-size: contain;
   top: 5px;
   left: 20px;
+  z-index: 1;
 }
 
 /* Index Header */
@@ -125,6 +126,25 @@ nav.index-page {
   width: 100%;
 }
 
+nav.index-page a[arial-label]::after {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  left: 75px;
+  right: auto;
+  bottom: 6px;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #fff;
+}
+
+nav.index-page a[arial-label]::after:hover {
+  display: none;
+}
+
+
 nav.index-page::after {
   content: '';
   display: block;
@@ -150,7 +170,7 @@ nav.index-page ul li a:hover {
 }
 
 nav.index-page > ul {
-  padding-left: 24%;
+  padding-left: 29%;
 }
 
 nav.index-page > ul > li {
