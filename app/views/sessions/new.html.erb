@@ -1,7 +1,7 @@
 <%= render 'layouts/header' %>
 
 <section class="main">
-  <h1>Sign in</h1>
+  <p class="login">Login</p>
   <div class="sign-in-form">
       <%= form_for(:session, url: login_path) do |f| %>
         <% if @alert %>
@@ -14,9 +14,8 @@
         <%= f.label :password %>
         <%= f.password_field :password, class: "password" %>
 
-        <%= f.submit "sign in", class: "sign-in" %>
+        <%= f.submit "Submit", class: "sign-in" %>
       <% end %>
-
-      <p>New user? <%= link_to "Sign up now!", new_user_path %></p>
   </div>
+  <p class="new-user">New user? <%= link_to "Sign up now!", new_user_path %></p>
 </section>
