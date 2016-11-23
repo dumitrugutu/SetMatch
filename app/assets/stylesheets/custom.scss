@@ -20,6 +20,7 @@ h1 {
   font-weight: 700;
   line-height: 1;
   letter-spacing: -2px;
+  text-align: center;
 }
 
 p {
@@ -171,20 +172,30 @@ nav.index-page ul li:hover > ul {
 
 section.main {
   position: relative;
-  height: 500px;
-  background: url(http://placehold.it/1200x500) no-repeat center bottom;
-  text-align: center;
+  height: 430px;
+  background: url(http://placehold.it/1200x430) no-repeat center bottom;
 }
 
 section.main h1 {
-  text-align: left;
-  margin-left: 28px;
+  margin-left: 35px;
+  padding-top: 60px;
+  font-size: 3em;
+  text-transform: uppercase;
+}
+
+p.login {
+  margin-left: 30px;
+  padding-top: 40px;
+  font-size: 1.3em;
+  font-weight: bold;
+  letter-spacing: -1px;
+  text-transform: uppercase;
 }
 
 section a.btn {
   position: absolute;
   top: 60%;
-  margin-left: -100px;
+  left: 41%;
   font-weight: bold;
   background-color: #ACFF60;
   padding: 10px 25px;
@@ -205,7 +216,6 @@ section a.btn:hover, .sign-in:hover {
   display: block;
   border: 1px solid #ACFF60;
   margin-top: 45px;
-  margin-left: 45px;
   font-weight: bold;
   background-color: #ACFF60;
   padding: 8px 20px;
@@ -226,16 +236,29 @@ section a.btn:hover, .sign-in:hover {
 /* Sign-in form */
 
 .sign-in-form {
-  text-align: left;
   text-transform: uppercase;
   font-size: .8em;
   padding-left: 30px;
+  margin-bottom: 30px;
 }
 
 .email, .password {
   padding: 4px;
   border: 1px solid #ACFF60;
   width: 200px;
+}
+
+p.new-user {
+  margin-left: 30px;;
+  font-size: .8em;
+}
+
+p.new-user a {
+  text-decoration: none;
+}
+
+p.new-user a:hover {
+  color: #0E91BF;
 }
 
 /* footer */
@@ -264,9 +287,4 @@ footer a:visited {
 footer a:hover {
   margin-left: 30px;
   color: #000;
-}
-/* flash */
-
-.notice {
-  color: #32cd32;
 }
