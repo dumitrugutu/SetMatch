@@ -11,15 +11,15 @@
             <ul>
               <li><%= link_to "Profile", "#" %></li>
               <li><%= link_to "Settings", "#" %></li>
-              <li><%= link_to 'Log out', logout_path %></li>
+              <li><%= link_to 'Logout', logout_path %></li>
             </ul>
           </li>
         <% else %>
           <li><%= link_to "Home", root_path %></li>
           <li><%= link_to "Create a match", new_post_path %></li>
           <li><%= link_to "Find a match", "#" %></li>
-          <li><%= link_to "Sign in", new_session_path %></li>
-          <li><%= link_to "Sign up", new_user_path %></li>
+          <li><%= link_to "Login", new_session_path %></li>
+          <li><%= link_to "Register", new_user_path %></li>
         <% end %>
       </ul>
     </nav>
