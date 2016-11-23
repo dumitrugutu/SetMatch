@@ -47,7 +47,6 @@ header a.main-logo {
   background-size: contain;
   top: 5px;
   left: 20px;
-  z-index: 1;
 }
 
 /* Index Header */
@@ -109,6 +108,7 @@ nav ul li a:hover {
 
 nav > ul {
   padding-left: 50%;
+  z-index: 1;
 }
 
 nav > ul > li {
@@ -174,7 +174,7 @@ nav.index-page ul li:hover > ul {
 section.main {
   position: relative;
   height: 430px;
-  background: url(http://placehold.it/1200x430) no-repeat center bottom;
+  background: url(lines.png) no-repeat center bottom;
 }
 
 section.main h1 {
