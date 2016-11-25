@@ -8,11 +8,15 @@
           <h3><%= @alert %></h3>
         <% end %>
 
-        <%= f.label :email %>
-        <%= f.email_field :email, class: "email" %>
+        <div class="email">
+          <%= f.label :email %>
+          <%= f.email_field :email %>
+        </div>
 
-        <%= f.label :password %>
-        <%= f.password_field :password, class: "password" %>
+        <div class="password">
+          <%= f.label :password %>
+          <%= f.password_field :password %>
+        </div>
 
         <%= f.submit "Submit", class: "sign-in" %>
       <% end %>
