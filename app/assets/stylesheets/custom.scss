@@ -73,11 +73,11 @@ header a.logo {
 
 /* Navigation */
 
-nav {
+header.main nav {
   position: absolute;
   top: 0px;
   left: 0px;
-  padding: 85px 0 0 0 ;
+  margin-top: 95px;
   width: 100%;
 }
 
@@ -90,7 +90,7 @@ nav ul {
 nav ul li a {
   display: inline-block;
   color: #fff;
-  padding: 10px 10px;
+  padding: 7px 10px;
   text-decoration: none;
   width: auto;
   font-weight: bolder;
@@ -111,12 +111,20 @@ nav ul li a[arial-label]::after {
   width: 0px;
   height: 0px;
   position: absolute;
-  left: 82px;
+  left: 65px;
   right: auto;
-  bottom: 15px;
+  bottom: 9px;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
   border-top: 4px solid #fff;
+}
+
+nav ul ul {
+  display: none;
+}
+
+nav ul li:hover > ul {
+  display: block;
 }
 
 nav ul li a:visited {
@@ -152,9 +160,9 @@ nav.index-page a[arial-label]::after {
   width: 0px;
   height: 0px;
   position: absolute;
-  left: 86px;
+  left: 65px;
   right: auto;
-  bottom: 13px;
+  bottom: 9px;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
   border-top: 4px solid #fff;
@@ -176,7 +184,7 @@ nav.index-page ul li a {
   display: inline-block;
   color: #fff;
   text-decoration: none;
-  padding: 10px 15px;
+  padding: 7px 10px;
   width: 100px;
 }
 
