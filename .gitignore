@@ -16,5 +16,8 @@
 # Ignore the secrets file
 config/secrets.yml
 
+# Ignore the seeds file
+db/seeds.rb
+
 # Ignore Byebug command history file.
 .byebug_history
