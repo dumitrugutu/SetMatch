@@ -19,7 +19,6 @@ h1 {
   font-size: 1.8em;
   font-weight: 700;
   line-height: 1;
-  letter-spacing: -2px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -96,7 +95,7 @@ nav ul li a {
   font-weight: bolder;
   position: relative;
   text-transform: uppercase;
-  font-size: .8em;
+  font-size: .6em;
   letter-spacing: -1;
 }
 
@@ -136,7 +135,7 @@ nav ul li a:hover {
 }
 
 nav > ul {
-  padding-left: 62%;
+  padding-left: 60%;
   z-index: 1;
 }
 
@@ -229,8 +228,8 @@ section.main h1 {
 
 p.login {
   margin-left: 30px;
-  padding-top: 40px;
-  font-size: 1em;
+  padding-top: 25px;
+  font-size: .9em;
   font-weight: bold;
   letter-spacing: -1px;
   text-transform: uppercase;
@@ -282,6 +281,8 @@ div.registration {
 
 div.registration h1 {
   text-align: left;
+  font-size: 1.1em;
+  letter-spacing: -1px;
 }
 
 div.registration input {
@@ -304,17 +305,54 @@ div.registration label {
   margin-top: 20px;
 }
 
-div.registration .left {
+div.registration .top {
   margin-top: 10px;
+  width: 235px;
+  float: left;
+}
+
+div.registration .left {
+  margin-top: 30px;
   width: 235px;
   float: left;
 }
 
 div.registration .bio {
   width: 440px;
-  margin-top: 40px;
+  margin-top: 30px;
   padding-right: 30px;
   float: left;
+}
+
+div.registration .age {
+  width: 235px;
+  margin-top: 30px;
+  float: left;
+}
+
+div.registration .gender {
+  margin-top: 30px;
+  padding-top: 27px;
+  width: 235px;
+  float: left;
+}
+
+div.create input {
+  width: auto;
+  height: auto;
+  float: left;
+  margin-top: 40px;
+  padding: 8px 20px;
+  font-weight: bold;
+  font-size: .7em;
+  background-color: #ACFF60;
+  color: white;
+  text-decoration: none;
+  position: relative;
+  clear: both;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  transition: background-color .5s;
 }
 
 div.sign-in-form {
@@ -364,12 +402,11 @@ input.sign-in {
   transition: background-color .5s;
 }
 
-input.sign-in:hover {
-  background-color: rgba(172,255,96,.8);
+input.sign-in:hover, .create:hover input {
+  background-color: rgba(172,255,96,.6);
   color: white;
   cursor: pointer;
 }
-
 
 p.new-user {
   margin-left: 30px;;
