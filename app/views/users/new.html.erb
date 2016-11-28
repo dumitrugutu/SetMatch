@@ -4,71 +4,70 @@
 	<div class="registration">
 		<h1>Create profile</h1>
 		<%= form_for @user, url: {action: 'create'} do |f| %>
-		<% if @user.errors.any? %>
-		<h3><%= pluralize(@user.errors.count, "error") %> prevented this post from saving!</h3>
-		<% @user.errors.full_messages.each do |error| %>
-		<p><%= error %></p>
-		<% end %>
-		<% end %>
+			<% if @user.errors.any? %>
+				<h3><%= pluralize(@user.errors.count, "error") %> prevented this post from saving!</h3>
+				<% @user.errors.full_messages.each do |error| %>
+					<p><%= error %></p>
+				<% end %>
+			<% end %>
 
-		<div class="left">
-			<%= f.label :fullname %><br />
-			<%= f.text_field :fullname%>
-		</div>
+			<div class="top">
+				<%= f.label :fullname %><br />
+				<%= f.text_field :fullname, required: "required" %>
+			</div>
 
-		<div class="left">
-			<%= f.label :email %><br />
-			<%= f.email_field :email, required: "required" %>
-		</div>
+			<div class="top">
+				<%= f.label :email %><br />
+				<%= f.email_field :email, required: "required" %>
+			</div>
 
-		<div class="left">
-			<%= f.label :password %><br />
-			<%= f.text_field :password %>
-		</div>
+			<div class="left">
+				<%= f.label :password %><br />
+				<%= f.text_field :password, required: "required"  %>
+			</div>
 
-		<div class="left">
-			<%= f.label :screen_name %><br />
-			<%= f.text_field :screen_name %>
-		</div>
+			<div class="left">
+				<%= f.label :screen_name %><br />
+				<%= f.text_field :screen_name %>
+			</div>
 
-		<div class="bio">
-			<%= f.label :bio %><br />
-			<%= f.text_area :bio %>
-		</div>
+			<div class="bio">
+				<%= f.label :bio %><br />
+				<%= f.text_area :bio %>
+			</div>
 
-		<div class="left">
-			<%= f.label :rating %><br />
-			<%= f.text_field :rating %>
-		</div>
+			<div class="left">
+				<%= f.label :rating %><br />
+				<%= f.text_field :rating %>
+			</div>
 
-		<div class="left">
-			<%= f.label :zipcode %>
-			<%= f.text_field :zipcode %>
-		</div>
+			<div class="left">
+				<%= f.label :zipcode %>
+				<%= f.text_field :zipcode, required: "required"  %>
+			</div>
 
-		<div class="left">
-			<%= f.label :age %>
-			<%= f.text_field :age %>
-		</div>
+			<div class="age">
+				<%= f.label :age %>
+				<%= f.text_field :age %>
+			</div>
 
-		<div class="left">
-			<%= f.label :gender %>
-			<%= f.text_field :gender %>
-		</div>
+			<div class="gender">
+				<%= f.label :gender %>
+				<%= select_tag(:gender, options_for_select([['Male', 1], ['Female', 2], ['Other', 3]], selected: :option )) %>
+			</div>
 
-		<div class="left">
-			<%= f.label :handed %>
-			<%= f.text_field :handed%>
-		</div>
+			<div class="left">
+				<%= f.label :handed %>
+				<%= f.text_field :handed%>
+			</div>
 
-		<div class="left">
-			<%= f.submit 'Create account'%>
-		</div>
+			<div class="create">
+				<%= f.submit 'Create account'%>
+			</div>
 		<% end %>
 	</div>
 
 	<div class="profile-pic">
 		<button>Upload/Change Photo</button>
 	</div>
-
 </div>
