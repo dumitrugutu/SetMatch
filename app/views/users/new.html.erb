@@ -1,16 +1,21 @@
 <%= render 'layouts/header' %>
 
-<div class="container">
-	<div class="registration">
-		<h1>Create profile</h1>
-		<%= form_for @user, url: {action: 'create'} do |f| %>
-			<% if @user.errors.any? %>
-				<h3><%= pluralize(@user.errors.count, "error") %> prevented this post from saving!</h3>
-				<% @user.errors.full_messages.each do |error| %>
-					<p><%= error %></p>
-				<% end %>
+<div class="registration">
+	<h1>Create profile</h1>
+	<%= form_for @user, html: { multipart: true } do |f| %>
+		<% if @user.errors.any? %>
+			<h3><%= pluralize(@user.errors.count, "error") %> prevented this post from saving!</h3>
+			<% @user.errors.full_messages.each do |error| %>
+				<p><%= error %></p>
 			<% end %>
+		<% end %>
 
+		<div class="avatar">
+			<%= f.label :image %>
+			<%= f.file_field :image %>
+		</div>
+
+		<div class="fields">
 			<div class="top">
 				<%= f.label :fullname %><br />
 				<%= f.text_field :fullname, required: "required" %>
@@ -60,14 +65,10 @@
 				<%= f.label :handed %>
 				<%= f.text_field :handed%>
 			</div>
+		</div>
 
-			<div class="create">
-				<%= f.submit 'Create account'%>
-			</div>
-		<% end %>
-	</div>
-
-	<div class="profile-pic">
-		<button>Upload/Change Photo</button>
-	</div>
+		<div class="actions">
+			<%= f.submit 'Create account'%>
+		</div>
+	<% end %>
 </div>

@@ -9,7 +9,7 @@
           <li><%= link_to "Find a match", "#" %></li>
           <li><%= link_to "Account", "#", 'arial-label': 'aria-haspopup=true' %>
             <ul>
-              <li><%= link_to "Profile", "#" %></li>
+              <li><%= link_to "Profile", user_path(current_user) %></li>
               <li><%= link_to "Settings", "#" %></li>
               <li><%= link_to 'Logout', logout_path %></li>
             </ul>

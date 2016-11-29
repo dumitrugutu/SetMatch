@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
     if @user && @user.authenticate(params[:session][:password])
       log_in(@user)
       flash[:notice] = "You have signed in successfully!"
-      redirect_to root_path
+      redirect_to user_path(@user)
     else
       @alert = "Incorrect email or password"
       render 'new'

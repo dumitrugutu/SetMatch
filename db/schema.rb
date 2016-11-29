@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161121225910) do
+ActiveRecord::Schema.define(version: 20161128235949) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,19 +29,24 @@ ActiveRecord::Schema.define(version: 20161121225910) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",           null: false
-    t.string   "fullname",        null: false
-    t.string   "screen_name",     null: false
-    t.string   "password_digest", null: false
+    t.string   "email",              null: false
+    t.string   "fullname",           null: false
+    t.string   "screen_name",        null: false
+    t.string   "password_digest",    null: false
     t.text     "bio"
     t.integer  "rating"
     t.integer  "zipcode"
     t.integer  "age"
     t.string   "gender"
     t.integer  "handed"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.string   "remember_digest"
+    t.string   "profile_image"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   add_foreign_key "posts", "users"
