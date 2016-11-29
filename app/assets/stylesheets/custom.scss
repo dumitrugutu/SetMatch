@@ -16,15 +16,13 @@ body {
   height: 100%;
 }
 
-h1 {
-  padding-top: 25px;
-  margin: 0 0 1em 0;
-  font-size: 1.8em;
-  font-weight: 700;
-  line-height: 1;
-  text-align: center;
-  text-transform: uppercase;
-}
+// h1 {
+//   font-size: 1.8em;
+//   font-weight: 700;
+//   line-height: 1;
+//   text-align: center;
+//   text-transform: uppercase;
+// }
 
 p {
   margin: 0 0 1em 0;
@@ -135,7 +133,7 @@ nav ul li a:hover {
 }
 
 nav > ul {
-  padding-left: 60%;
+  padding-left: 54%;
   z-index: 1;
 }
 
@@ -255,145 +253,121 @@ section a.btn:hover, .sign-in:hover {
 /* Registration form */
 
 .registration {
-  border: 1px solid pink;
+  width: 100%;
+  height: 600px;
 }
 
 .avatar {
-  width: 30%;
-  height: 600px;
-  border: 1px solid #000;
+  width: 35%;
+  height: 500px;
+  position: relative;
   float: left;
 }
 
 .image {
   width: 220px;
   height: 220px;
-  margin-left: 12%;
+  margin-top: 50px;
+  margin-left: 35%;
   border: 2px solid #ACFF60;
 }
 
 .upload {
-  margin: 40px 0 0 65px;
+  position: absolute;
+  top: 300px;
+  left: 155px;
   text-align: center;
 }
 
 .form-fields {
-  padding-left: 50px;
-  border: 1px solid #000;
-  width: 60%;
-  border: 1px solid blue;
-  height: 600px;
+  margin-top: 60px;
+  width: 57%;
+  height: 500px;
   float: right;
   position: relative;
 }
 
-form .top {
-  width: 40%;
+.top {
+  width: 100%;
+}
+
+.email, .fullname, .password, .screen_name {
   display: inline-block;
+  padding: 30px 20px 0 0;
 }
 
-.age, .zipcode, .rating {
-  width: 20%;
-  margin-right: 20px;
-  display: inline-block;
-}
-
-.registration label {
-  text-transform: uppercase;
-  font-size: .7em;
-}
-
-.form-fields input {
+.top input {
   margin-top: 5px;
   padding: 4px;
   border: 1px solid #ACFF60;
   width: 200px;
 }
 
+.bio {
+  padding-top: 30px;
+}
+
+.middle {
+  width: 100%;
+}
+
+.age, .zipcode, .rating {
+  padding-top: 30px;
+  width: 119px;
+  margin-right: 40px;
+  display: inline-block;
+}
+
+.age input, .rating input, .zipcode input, .bottom input {
+  border: 1px solid #ACFF60;
+}
+
+.bottom {
+  padding-top: 30px;
+  width: 100%;
+}
+
+.gender, .handed {
+  display: inline-block;
+  margin-right: 40px;
+}
+
+.registration label {
+  text-transform: uppercase;
+  font-size: .7em;
+  margin-right: 20px;
+}
+
 .form-fields textarea {
-  width: 451px;
+  width: 440px;
   margin-top: 5px;
   border: 1px solid #ACFF60;
   display: block;
 }
 
-// div.registration h1 {
-//   text-align: left;
-//   font-size: 1.1em;
-//   letter-spacing: -1px;
-// }
-//
-// div.registration input {
-//   margin-top: 5px;
-//   padding: 4px;
-//   border: 1px solid #ACFF60;
-//   width: 200px;
-// }
-//
-// div.registration textarea {
-//   border: 1px solid #ACFF60;
-//   width: 439px;
-//   height: 80px;
-//   clear: both;
-// }
-//
-// div.registration label {
-//   font-size: .8em;
-//   text-transform: uppercase;
-//   margin-top: 20px;
-// }
-//
-// div.registration .top {
-//   margin-top: 10px;
-//   width: 235px;
-//   float: left;
-// }
-//
-// div.registration .left {
-//   margin-top: 30px;
-//   width: 235px;
-//   float: left;
-// }
-//
-// div.registration .bio {
-//   width: 440px;
-//   margin-top: 30px;
-//   padding-right: 30px;
-//   float: left;
-// }
-//
-// div.registration .age {
-//   width: 235px;
-//   margin-top: 30px;
-//   float: left;
-// }
-//
-// div.registration .gender {
-//   margin-top: 30px;
-//   padding-top: 27px;
-//   width: 235px;
-//   float: left;
-// }
-//
-// div.create input {
-//   width: auto;
-//   height: auto;
-//   float: left;
-//   margin-top: 40px;
-//   padding: 8px 20px;
-//   font-weight: bold;
-//   font-size: .7em;
-//   background-color: #ACFF60;
-//   color: white;
-//   text-decoration: none;
-//   position: relative;
-//   clear: both;
-//   letter-spacing: .5px;
-//   text-transform: uppercase;
-//   transition: background-color .5s;
-// }
-//
+div.registration h1 {
+  padding-top: 35px;
+  position: absolute;
+  left: 43%;
+  text-align: center;
+  font-size: 1.1em;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
 
+.actions input {
+  border: 1px solid #ACFF60;
+  margin-top: 55px;
+  font-weight: bold;
+  background-color: #ACFF60;
+  padding: 8px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-size: 12px;
+  letter-spacing: .5px;
+  transition: background-color .5s;
+}
 /* Sign in form */
 
 div.sign-in-form {
@@ -445,7 +419,7 @@ input.sign-in {
   transition: background-color .5s;
 }
 
-input.sign-in:hover, .create:hover input {
+input.sign-in:hover, .create:hover input, .actions:hover input {
   background-color: rgba(172,255,96,.6);
   color: white;
   cursor: pointer;

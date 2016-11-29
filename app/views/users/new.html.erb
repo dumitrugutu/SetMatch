@@ -19,56 +19,65 @@
 
 		<div class="form-fields">
 			<div class="top">
-				<%= f.label "full name" %>
-				<%= f.text_field :fullname, required: "required" %>
-			</div>
+				<div class="fullname">
+					<%= f.label "full name" %><br>
+					<%= f.text_field :fullname, required: "required" %>
+				</div>
 
-			<div class="top">
-				<%= f.label :email %>
-				<%= f.email_field :email, required: "required" %>
-			</div>
+				<div class="email">
+					<%= f.label :email %><br>
+					<%= f.email_field :email, required: "required" %>
+				</div>
 
-			<div class="top">
-				<%= f.label :password %>
-				<%= f.text_field :password, required: "required"  %>
-			</div>
+				<div class="password">
+					<%= f.label :password %><br>
+					<%= f.text_field :password, required: "required"  %>
+				</div>
 
-			<div class="top">
-				<%= f.label :screen_name %>
-				<%= f.text_field :screen_name %>
-			</div>
+				<div class="screen_name">
+					<%= f.label :screen_name %><br>
+					<%= f.text_field :screen_name %>
+				</div>
 
+			</div>
 			<div class="bio">
 				<%= f.label :bio %>
 				<%= f.text_area :bio %>
 			</div>
 
-			<div class="rating">
-				<%= f.label :rating %>
-				<%= f.text_field :rating %>
+			<div class="middle">
+				<div class="rating">
+					<%= f.label :rating %>
+					<%= f.text_field :rating %>
+				</div>
+
+				<div class="zipcode">
+					<%= f.label :zipcode %>
+					<%= f.text_field :zipcode, required: "required"  %>
+				</div>
+
+				<div class="age">
+					<%= f.label :age %>
+					<%= f.text_field :age %>
+				</div>
 			</div>
 
-			<div class="zipcode">
-				<%= f.label :zipcode %>
-				<%= f.text_field :zipcode, required: "required"  %>
-			</div>
-
-			<div class="age">
-				<%= f.label :age %>
-				<%= f.text_field :age %>
-			</div>
-
-			<div class="gender">
-				<%= f.label :gender %>
-				<%= radio_button_tag(:gender, "Female") %>
-				<%= radio_button_tag(:gender, "Male") %>
-				<%= radio_button_tag(:gender, "Other") %>
+			<div class="bottom">
+				<div class="gender">
+					<%= f.label :gender %><br>
+					<%= radio_button_tag(:gender, "Female") %>
+					<%= label_tag "Female" %>
+					<%= radio_button_tag(:gender, "Male") %>
+					<%= label_tag "Male" %>
+					<%= radio_button_tag(:gender, "Other") %>
+					<%= label_tag "Other" %>
+				</div>
 				<!-- <%= select_tag(:gender, options_for_select([['Male'], ['Female'], ['Other']], selected: :option )) %> -->
-			</div>
 
-			<div class="left">
-				<%= f.label :handed %>
-				<%= f.text_field :handed%>
+				<div class="handed">
+					<%= f.label :handed %><br>
+					<%= f.text_field :handed%>
+				</div>
 			</div>
 
 			<div class="actions">
