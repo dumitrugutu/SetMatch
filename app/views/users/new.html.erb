@@ -11,42 +11,44 @@
 		<% end %>
 
 		<div class="avatar">
-			<%= f.label :image %>
-			<%= f.file_field :image %>
+			<div class="image"></div>
+			<div class="upload">
+				<%= f.file_field :image %>
+			</div>
 		</div>
 
-		<div class="fields">
+		<div class="form-fields">
 			<div class="top">
-				<%= f.label :fullname %><br />
+				<%= f.label "full name" %>
 				<%= f.text_field :fullname, required: "required" %>
 			</div>
 
 			<div class="top">
-				<%= f.label :email %><br />
+				<%= f.label :email %>
 				<%= f.email_field :email, required: "required" %>
 			</div>
 
-			<div class="left">
-				<%= f.label :password %><br />
+			<div class="top">
+				<%= f.label :password %>
 				<%= f.text_field :password, required: "required"  %>
 			</div>
 
-			<div class="left">
-				<%= f.label :screen_name %><br />
+			<div class="top">
+				<%= f.label :screen_name %>
 				<%= f.text_field :screen_name %>
 			</div>
 
 			<div class="bio">
-				<%= f.label :bio %><br />
+				<%= f.label :bio %>
 				<%= f.text_area :bio %>
 			</div>
 
-			<div class="left">
-				<%= f.label :rating %><br />
+			<div class="rating">
+				<%= f.label :rating %>
 				<%= f.text_field :rating %>
 			</div>
 
-			<div class="left">
+			<div class="zipcode">
 				<%= f.label :zipcode %>
 				<%= f.text_field :zipcode, required: "required"  %>
 			</div>
@@ -58,17 +60,20 @@
 
 			<div class="gender">
 				<%= f.label :gender %>
-				<%= select_tag(:gender, options_for_select([['Male'], ['Female'], ['Other']], selected: :option )) %>
+				<%= radio_button_tag(:gender, "Female") %>
+				<%= radio_button_tag(:gender, "Male") %>
+				<%= radio_button_tag(:gender, "Other") %>
+				<!-- <%= select_tag(:gender, options_for_select([['Male'], ['Female'], ['Other']], selected: :option )) %> -->
 			</div>
 
 			<div class="left">
 				<%= f.label :handed %>
 				<%= f.text_field :handed%>
 			</div>
-		</div>
 
-		<div class="actions">
-			<%= f.submit 'Create account'%>
+			<div class="actions">
+				<%= f.submit 'Create account'%>
+			</div>
 		</div>
 	<% end %>
 </div>
