@@ -7,9 +7,8 @@ body {
   font-size: 16px;
   font-weight: 500;
   color: #000;
-  margin: 0;
-  padding: 0;
-  width: 100%;
+  margin: 0 auto;
+  max-width: 1020px;
   height: 100%;
 }
 
@@ -255,27 +254,69 @@ section a.btn:hover, .sign-in:hover {
   color: white;
 }
 
-/* Sign-in form */
+/* Registration form */
 
-// div.registration {
-//
-// }
+.registration {
+  border: 1px solid pink;
+}
 
-div.profile_image {
-  width: 20%;
-  height: 20%;
+.avatar {
+  width: 30%;
+  height: 600px;
   border: 1px solid #000;
   float: left;
 }
 
-div.fields {
+.image {
+  width: 220px;
+  height: 220px;
+  margin-left: 12%;
+  border: 2px solid #ACFF60;
+}
+
+.upload {
+  margin: 40px 0 0 65px;
+  text-align: center;
+}
+
+.form-fields {
   padding-left: 50px;
   border: 1px solid #000;
-  width: 100%;
-  float: right;
+  width: 60%;
   border: 1px solid blue;
-  height: 100%;
+  height: 600px;
+  float: right;
   position: relative;
+}
+
+form .top {
+  width: 40%;
+  display: inline-block;
+}
+
+.age, .zipcode, .rating {
+  width: 20%;
+  margin-right: 20px; 
+  display: inline-block;
+}
+
+.registration label {
+  text-transform: uppercase;
+  font-size: .7em;
+}
+
+.form-fields input {
+  margin-top: 5px;
+  padding: 4px;
+  border: 1px solid #ACFF60;
+  width: 200px;
+}
+
+.form-fields textarea {
+  width: 451px;
+  margin-top: 5px;
+  border: 1px solid #ACFF60;
+  display: block;
 }
 
 // div.registration h1 {
@@ -354,6 +395,9 @@ div.fields {
 //   transition: background-color .5s;
 // }
 //
+
+/* Sign in form */
+
 div.sign-in-form {
   width: 100%;
   text-transform: uppercase;
