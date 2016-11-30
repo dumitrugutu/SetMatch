@@ -1,7 +1,9 @@
 class PostsController < ApplicationController
 
   def index
-    @all_posts = Post.all
+    @search = Post.ransack(params[:q])
+    # @all_posts = Post.all
+    @all_posts = @search.result
   end
 
   def find

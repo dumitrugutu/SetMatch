@@ -1,6 +1,16 @@
 <%= render 'layouts/header' %>
 
+<%= search_form_for @search do |f| %>
+   <div class="field">
+       <%= f.label :title_cont, "User contains" %>
+       <%= f.text_field :title_cont %>
+   </div>
+
+   <div class="actions"><%= f.submit "Search" %></div>
+<% end %>
+
 <% @all_posts.each do |post| %>
 	<h1><%= post.title %></h1>
 	<p><%= post.body %></p>
 <% end %>
+

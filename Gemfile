@@ -27,6 +27,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 # Uploads user's profile pictures
 gem "paperclip", "~> 5.0.0"
+gem "ransack"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
