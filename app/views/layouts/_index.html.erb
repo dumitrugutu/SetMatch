@@ -1,7 +1,7 @@
-<header class="main">
+<header id="index-page">
   <div>
-    <span><%= link_to "", root_path, class: "main-logo", alt: "SetMatch" %></span>
-    <nav>
+    <span><%= link_to "", root_path, class: "logo" %></span>
+    <nav class="index-page">
       <ul>
         <% if logged_in? %>
           <li><%= link_to "Home", root_path %></li>
@@ -25,3 +25,9 @@
     </nav>
   </div>
 </header>
+<section class="main">
+  <h1>Find your perfect match</h1>
+  <div>
+    <%= link_to "Get Started", new_post_path, class: "btn" %>
+  </div>
+</section>

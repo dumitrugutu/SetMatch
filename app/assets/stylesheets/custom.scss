@@ -1,77 +1,465 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 /* universal */
 
 body {
-  padding-top: 60px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  margin: 0 auto;
+  max-width: 100%;
+  height: 100%;
 }
 
-h1 {
-  margin-bottom: 10px;
+p {
+  margin: 0 0 1em 0;
 }
 
-/* typography */
+a { color: #007eff; }
+a:visited { color: #65b1ff; }
 
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
+/* Header */
+
+header {
+  height: 132px;
+  background-color: #000;
+  position: relative;
 }
 
-h1 {
-  font-size: 3em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
+header a.main-logo {
+  position: absolute;
+  display: block;
+  width: 150px;
+  height: 150px;
+  background: url(logo1.png) no-repeat 0 0;
+  background-size: contain;
+  top: 5px;
+  left: 20px;
+  z-index: 1;
 }
 
-/* header */
+/* Index Header */
 
-#logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 1.7em;
+header#index-page {
+  height: 450px;
+  background: url(banner_1200x450.jpg) no-repeat center bottom;
+  border-bottom: 18px solid black;
+  width: 100%;
+}
+
+header a.logo {
+  position: relative;
+  display: block;
+  width: 300px;
+  height: 200px;
+  background: url(logo_300x200.png) no-repeat;
+  background-size: contain;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+/* Navigation */
+
+header.main nav {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin-top: 95px;
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+nav ul li a {
+  display: inline-block;
   color: #fff;
+  padding: 7px 10px;
+  text-decoration: none;
+  width: auto;
+  font-weight: bolder;
+  position: relative;
   text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: -1;
 }
 
-#logo:hover {
+header.main nav ul li:last-child:hover {
+  background-color: #000;
+  width: 100px;
+}
+
+nav ul li a[arial-label]::after {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 0px;
+  position: relative;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #fff;
+}
+
+nav ul ul {
+  display: none;
+}
+
+nav ul li:hover > ul {
+  display: block;
+}
+
+nav ul li a:visited {
+  color: #fff;
+}
+
+nav ul li a:hover {
+  color: #ACFF60;
+}
+
+nav > ul {
+  padding-left: 54%;
+  z-index: 1;
+}
+
+nav > ul > li {
+  float: left;
+}
+
+/* Index Navigation */
+
+nav.index-page {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 150px 0 0 0;
+  width: 100%;
+}
+
+nav.index-page a[arial-label]::after {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 0px;
+  position: relative;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #fff;
+}
+
+nav.index-page::after {
+  content: '';
+  display: block;
+}
+
+nav.index-page ul {
+  list-style: none;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+}
+
+nav.index-page ul li a {
+  display: inline-block;
   color: #fff;
   text-decoration: none;
+  padding: 7px 10px;
+  width: 100px;
+}
+
+nav.index-page ul li a:hover {
+  color: #ACFF50;
+}
+
+nav.index-page > ul {
+  margin-left: 33%;
+}
+
+nav.index-page > ul > li {
+  float: left;
+}
+
+nav.index-page > ul > li > a {
+  width: auto;
+}
+
+nav.index-page ul ul {
+  display: none;
+}
+
+nav.index-page ul li:hover > ul {
+  display: block;
+}
+
+/* Main section */
+
+section.main {
+  position: relative;
+  height: 430px;
+  background: url(lines.png) no-repeat center bottom;
+}
+
+
+section.main h1 {
+  margin-left: 35px;
+  padding-top: 60px;
+  font-size: 3em;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+p.login {
+  margin-left: 30px;
+  padding-top: 25px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+
+section a.btn {
+  position: absolute;
+  top: 60%;
+  left: 41%;
+  font-weight: bold;
+  background-color: #ACFF60;
+  padding: 10px 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  color: white;
+  letter-spacing: .5px;
+  transition: background-color .5s;
+}
+
+section a.btn:hover, .sign-in:hover {
+  background-color: rgba(172,255,96,.8);
+  color: white;
+}
+
+/* Registration form */
+
+.registration {
+  width: 100%;
+  height: 600px;
+}
+
+.avatar {
+  width: 35%;
+  height: 500px;
+  position: relative;
+  float: left;
+}
+
+.image {
+  width: 220px;
+  height: 220px;
+  margin-top: 50px;
+  margin-left: 35%;
+  border: 2px solid #ACFF60;
+}
+
+.upload {
+  position: absolute;
+  top: 300px;
+  left: 155px;
+  text-align: center;
+}
+
+.form-fields {
+  margin-top: 60px;
+  width: 57%;
+  height: 500px;
+  float: right;
+  position: relative;
+}
+
+.top {
+  width: 100%;
+}
+
+.reg-email, .fullname, .reg-password, .screen_name {
+  display: inline-block;
+  padding: 30px 20px 0 0;
+}
+
+.reg-email {
+  width: 55%;
+}
+
+.top input {
+  margin-top: 5px;
+  padding: 4px;
+  border: 1px solid #ACFF60;
+  width: 200px;
+}
+
+.bio {
+  padding-top: 30px;
+}
+
+.middle {
+  width: 100%;
+}
+
+.age, .zipcode, .rating {
+  padding-top: 30px;
+  width: 119px;
+  margin-right: 40px;
+  display: inline-block;
+}
+
+.age input, .rating input, .zipcode input, .bottom input {
+  border: 1px solid #ACFF60;
+}
+
+.bottom {
+  padding-top: 30px;
+  width: 100%;
+}
+
+.gender, .handed {
+  display: inline-block;
+  margin-right: 40px;
+}
+
+.registration label {
+  text-transform: uppercase;
+  font-size: .7em;
+  margin-right: 20px;
+}
+
+.form-fields textarea {
+  width: 440px;
+  height: 60px;
+  margin-top: 5px;
+  border: 1px solid #ACFF60;
+  display: block;
+}
+
+div.registration h1 {
+  padding-top: 35px;
+  position: absolute;
+  left: 43%;
+  text-align: center;
+  font-size: 1.1em;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+
+.actions input {
+  border: 1px solid #ACFF60;
+  margin-top: 55px;
+  font-weight: bold;
+  background-color: #ACFF60;
+  padding: 8px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-size: 12px;
+  letter-spacing: .5px;
+  transition: background-color .5s;
+}
+/* Sign in form */
+
+div.sign-in-form {
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding-left: 30px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+div.sign-in-form .email {
+  width: 240px;
+  float: left;
+}
+
+div.sign-in-form .email input {
+  margin-top: 5px;
+  padding: 4px;
+  border: 1px solid #ACFF60;
+  width: 200px;
+}
+
+div.sign-in-form .password {
+  width: 240px;
+  float: left;
+}
+
+div.sign-in-form .password input {
+  margin-top: 5px;
+  padding: 4px;
+  border: 1px solid #ACFF60;
+  width: 200px;
+}
+
+input.sign-in {
+  border: 1px solid #ACFF60;
+  margin-top: 70px;
+  font-weight: bold;
+  background-color: #ACFF60;
+  padding: 8px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  position: relative;
+  font-size: 12px;
+  left: -480px;
+  letter-spacing: .5px;
+  transition: background-color .5s;
+}
+
+input.sign-in:hover, .create:hover input, .actions:hover input {
+  background-color: rgba(172,255,96,.6);
+  color: white;
+  cursor: pointer;
+}
+
+p.new-user {
+  margin-left: 30px;;
+  font-size: .8em;
+}
+
+p.new-user a {
+  text-decoration: none;
+}
+
+p.new-user a:hover {
+  color: #0E91BF;
 }
 
 /* footer */
 
 footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid #eaeaea;
+  font-size: .8em;
+  margin: 40px 0 30px 0;
   color: #777;
+  text-align: center;
+  clear: both;
+}
+
+footer .content {
+  display: inline;
 }
 
 footer a {
-  color: #555;
+  margin-left: 30px;
+  color: #777;
+}
+
+footer a:visited {
+  margin-left: 30px;
+  color: #777;
 }
 
 footer a:hover {
-  color: #222;
-}
-
-footer ul {
-  float: right;
-  list-style: none;
-}
-
-footer ul li {
-  float: left;
-  list-style-type: none;
-  display: inline-block;
-  margin-left: 15px;
-}
-
-/* flash */
-
-.notice {
-  color: #32cd32;
+  margin-left: 30px;
+  color: #000;
 }
