@@ -1,16 +1,27 @@
 <%= render 'layouts/header' %>
 
-<%= search_form_for @search do |f| %>
-   <div class="field">
-       <%= f.label :title_cont, "User contains" %>
-       <%= f.text_field :title_cont %>
-   </div>
+<div class="search-posts">
+  <%= search_form_for @search do |f| %>
+     <div class="field">
+         <%= f.label :title_cont, "User contains" %>
+         <%= f.text_field :title_cont %>
+     </div>
 
-   <div class="actions"><%= f.submit "Search" %></div>
-<% end %>
+     <div class="actions"><%= f.submit "Search" %></div>
+  <% end %>
+</div>
 
-<% @all_posts.each do |post| %>
-	<h1><%= post.title %></h1>
-	<p><%= post.body %></p>
-<% end %>
-
+<div class="show-posts">
+  <div class="post-container">
+    <% @all_posts.each do |post| %>
+      <div class="author-profile">
+        <%= image_tag post.author.image.url(:medium) %>
+        <p><%= link_to post.author.fullname, user_path(post.author) %></p>
+      </div>
+      <div class="post-details">
+        <h2><%= link_to post.title, post_path(post) %></h2><span>- created <%= time_ago_in_words(post.created_at) %> ago</span>
+        <p><%= post.body %></p>
+      </div>
+    <% end %>
+  </div>
+</div>

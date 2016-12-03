@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   end
 
   def find
-    @all_posts = Post.all
+    @all_posts = Post.all.sorted
   end
 
   def new
