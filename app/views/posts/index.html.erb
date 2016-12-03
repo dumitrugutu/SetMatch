@@ -1,99 +1,27 @@
-<%= render 'layouts/index' %>
+<%= render 'layouts/header' %>
 
-<section class="monday">
-  <div>
-    <% if !@mondays.empty? %>
-      <h4><%= @mondays.first.date.strftime("%A, %B %d, %Y") %></h4>
-    <% end %>
-  </div>
-  <div>
-    <% @mondays.each do |post| %>
-      <h4><%= link_to post.title, post_path(post) %></h4>
-      <p><%= post.body %></p>
-    <% end %>
-  </div>
-</section>
+<div class="search-posts">
+  <%= search_form_for @search do |f| %>
+     <div class="field">
+         <%= f.label :title_cont, "User contains" %>
+         <%= f.text_field :title_cont %>
+     </div>
 
-<section class="tuesday">
-  <div>
-    <% if !@tuesdays.empty? %>
-      <h4><%= @tuesdays.first.date.strftime("%A, %B %d, %Y") %></h4>
-    <% end %>
-  </div>
-  <div>
-    <% @tuesdays.each do |post| %>
-      <h4><%= link_to post.title, post_path(post) %></h4>
-      <p><%= post.body %></p>
-    <% end %>
-  </div>
-</section>
+     <div class="actions"><%= f.submit "Search" %></div>
+  <% end %>
+</div>
 
-<section class="wednesday">
-  <div>
-    <% if !@wednesdays.empty? %>
-    <h4><%= @wednesdays.first.date.strftime("%A, %B %d, %Y") %></h4>
+<div class="show-posts">
+  <div class="post-container">
+    <% @all_posts.each do |post| %>
+      <div class="author-profile">
+        <%= image_tag post.author.image.url(:medium) %>
+        <p><%= link_to post.author.fullname, user_path(post.author) %></p>
+      </div>
+      <div class="post-details">
+        <h2><%= link_to post.title, post_path(post) %></h2><span>- created <%= time_ago_in_words(post.created_at) %> ago</span>
+        <p><%= post.body %></p>
+      </div>
     <% end %>
   </div>
-  <div>
-    <% @wednesdays.each do |post| %>
-      <h4><%= link_to post.title, post_path(post) %></h4>
-      <p><%= post.body %></p>
-    <% end %>
-  </div>
-</section>
-
-<section class="thursday">
-  <div>
-    <% if !@thursdays.empty? %>
-      <h4><%= @thursdays.first.date.strftime("%A, %B %d, %Y") %></h4>
-    <% end %>
-  </div>
-  <div>
-    <% @thursdays.each do |post| %>
-      <h4><%= link_to post.title, post_path(post) %></h4>
-      <p><%= post.body %></p>
-    <% end %>
-  </div>
-</section>
-
-<section class="friday">
-  <div>
-    <% if !@fridays.empty? %>
-      <h4><%= @fridays.first.date.strftime("%A, %B %d, %Y") %></h4>
-    <% end %>
-  </div>
-  <div>
-    <% @fridays.each do |post| %>
-      <h4><%= link_to post.title, post_path(post) %></h4>
-      <p><%= post.body %></p>
-    <% end %>
-  </div>
-</section>
-
-<section class="saturday">
-  <div>
-    <% if !@saturdays.empty? %>
-      <h4><%= @saturdays.first.date.strftime("%A, %B %d, %Y") %></h4>
-    <% end %>
-  </div>
-  <div>
-    <% @saturdays.each do |post| %>
-      <h4><%= link_to post.title, post_path(post) %></h4>
-      <p><%= post.body %></p>
-    <% end %>
-  </div>
-</section>
-
-<section class="sunday">
-  <div>
-    <% if !@sundays.empty? %>
-      <h4><%= @sundays.first.date.strftime("%A, %B %d, %Y") %></h4>
-    <% end %>
-  </div>
-  <div>
-    <% @sundays.each do |post| %>
-      <h4><%= link_to post.title, post_path(post) %></h4>
-      <p><%= post.body %></p>
-    <% end %>
-  </div>
-</section>
+</div>

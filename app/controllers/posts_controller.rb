@@ -1,14 +1,13 @@
 class PostsController < ApplicationController
 
   def index
-    all_posts = Post.all
-    @mondays = all_posts.select { |post| post.date.strftime("%A") == "Monday" if post.date }
-    @tuesdays = all_posts.select { |post| post.date.strftime("%A") == "Tuesday" if post.date }
-    @wednesdays = all_posts.select { |post| post.date.strftime("%A") == "Wednesday" if post.date }
-    @thursdays = all_posts.select { |post| post.date.strftime("%A") == "Thursday" if post.date }
-    @fridays = all_posts.select { |post| post.date.strftime("%A") == "Friday" if post.date }
-    @saturdays = all_posts.select { |post| post.date.strftime("%A") == "Saturday" if post.date }
-    @sundays = all_posts.select { |post| post.date.strftime("%A") == "Sunday" if post.date }
+    @search = Post.ransack(params[:q])
+    # @all_posts = Post.all
+    @all_posts = @search.result
+  end
+
+  def find
+    @all_posts = Post.all.sorted
   end
 
   def new
