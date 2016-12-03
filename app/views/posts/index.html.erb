@@ -20,7 +20,8 @@
       </div>
       <div class="post-details">
         <h2><%= link_to post.title, post_path(post) %></h2><span>- created <%= time_ago_in_words(post.created_at) %> ago</span>
-        <p><%= post.body %></p>
+        <!-- brakes long paragraphs at specified length -->
+        <p><%= truncate(post.body, length: 250) %></p>
       </div>
     <% end %>
   </div>
