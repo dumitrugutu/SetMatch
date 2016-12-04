@@ -17,7 +17,7 @@ class PostsController < ApplicationController
       @post = Post.new
     else
       flash[:notice] = "Wow! You\'re not even logged in."
-      redirect_to 'sessions/new'
+      render('sessions/new')
     end
   end
 
@@ -27,7 +27,7 @@ class PostsController < ApplicationController
     @post.author = current_user if current_user
     if @post.save
       flash[:notice] = "Post created successfully."
-      redirect_to posts_path
+      redirect_to(posts_path)
     else
       render('new')
     end
