@@ -16,7 +16,8 @@ class PostsController < ApplicationController
     if logged_in?
       @post = Post.new
     else
-      render 'sessions/new'
+      flash[:notice] = "Wow! You\'re not even logged in."
+      redirect_to 'sessions/new'
     end
   end
 
@@ -25,6 +26,7 @@ class PostsController < ApplicationController
     # use the id of the signed in user to create a post
     @post.author = current_user if current_user
     if @post.save
+      flash[:notice] = "Post created successfully."
       redirect_to posts_path
     else
       render('new')
@@ -43,6 +45,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
 
     if @post.update_attributes(post_params)
+      flash[:notice] = "Post updated successfully."
       redirect_to(post_path(@post))
     else
       render('edit')
@@ -55,6 +58,7 @@ class PostsController < ApplicationController
 
   def destroy
     Post.find(params[:id]).destroy
+    flash[:notice] = "Post deleted successfully."
     redirect_to(posts_path)
   end
 
@@ -68,6 +72,7 @@ class PostsController < ApplicationController
     # Confirms a logged-in user.
     def logged_in_user
       unless logged_in?
+        flash[:notice] = "Wow! You\'re not even logged in."
         redirect_to(login_path)
       end
     end
@@ -75,6 +80,7 @@ class PostsController < ApplicationController
     # Confirms the correct user
     def authorized_user
       @post = Post.find(params[:id])
+      flash[:notice] = "You\'re not allowed to do that."
       redirect_to(root_path) unless @post.author == current_user
     end
 end

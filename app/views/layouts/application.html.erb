@@ -10,7 +10,14 @@
 
   <body>
     <div id="page">
+      <% if !flash[:notice].blank? %>
+        <div class="notice">
+          <%= flash[:notice] %>
+        </div>
+      <% end %>
+
       <%= yield %>
+      
       <%= render 'layouts/footer' %>
     </div>
   </body>
