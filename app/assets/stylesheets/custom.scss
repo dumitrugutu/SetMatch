@@ -50,7 +50,7 @@ header a.main-logo {
 
 header#index-page {
   height: 450px;
-  background: url(banner_1200x450.jpg) no-repeat center bottom;
+  background: image-url('banner_1200x450.jpg') no-repeat center bottom;
   border-bottom: 18px solid black;
   width: 100%;
 }
@@ -60,7 +60,7 @@ header a.logo {
   display: block;
   width: 300px;
   height: 200px;
-  background: url(logo_300x200.png) no-repeat;
+  background: image-url('logo_300x200.png') no-repeat;
   background-size: contain;
   margin: 0 auto;
   z-index: 1;
