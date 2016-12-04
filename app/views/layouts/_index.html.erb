@@ -1,7 +1,7 @@
-<header id="index-page">
-  <div>
-    <span><%= link_to "", root_path, class: "logo" %></span>
-    <nav class="index-page">
+<header id="welcome-page">
+  <span><%= link_to "", root_path, class: "logo" %></span>
+  <div id="navbar">
+    <nav class="welcome-page">
       <ul>
         <% if logged_in? %>
           <li><%= link_to "Home", root_path %></li>
@@ -26,8 +26,10 @@
   </div>
 </header>
 <section class="main">
-  <h1>Find your perfect match</h1>
-  <div>
+  <div class="welcome-h1">
+    <h1>Find your perfect match</h1>
+  </div>
+  <div class="get-started">
     <%= link_to "Get Started", new_post_path, class: "btn" %>
   </div>
 </section>

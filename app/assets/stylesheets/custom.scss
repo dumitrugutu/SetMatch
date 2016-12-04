@@ -29,7 +29,7 @@ a:visited { color: #65b1ff; }
 /* Header */
 
 header {
-  height: 155px;
+  height: 145px;
   background-color: #000;
   position: relative;
 }
@@ -37,8 +37,8 @@ header {
 header a.main-logo {
   position: absolute;
   display: block;
-  width: 150px;
-  height: 155px;
+  width: 172px;
+  height: 140px;
   background: image-url('logo_172px.png') no-repeat center;
   background-size: contain;
   top: 5px;
@@ -46,12 +46,12 @@ header a.main-logo {
   z-index: 1;
 }
 
-/* Index Header */
+/* Welcome Page Header */
 
-header#index-page {
-  height: 550px;
+header#welcome-page {
+  height: 500px;
   background: image-url('tennis_banner_1300px.jpg') no-repeat center bottom;
-  background-size: contain;
+  background-size: cover;
   border-bottom: 18px solid black;
   width: 100%;
 }
@@ -65,6 +65,63 @@ header a.logo {
   background-size: contain;
   margin: 0 auto;
   z-index: 1;
+}
+
+/* Welcome Page Navigation */
+#navbar {
+  width: 100%;
+  height: 100px;
+}
+
+nav.welcome-page {
+  border: 2px solid pink;
+  height: 100px;
+  margin: 0 auto;
+}
+
+nav.welcome-page > ul {
+  border: 2px solid blue;
+  height: 80px;
+}
+
+nav.welcome-page ul li a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  padding: 7px 10px;
+  width: 100px;
+}
+
+nav.welcome-page ul li a:hover {
+  color: #ACFF50;
+}
+
+nav.welcome-page > ul > li > a {
+  width: auto;
+}
+
+nav.welcome-page ul ul {
+  display: none;
+}
+
+nav.welcome-page ul li:hover > ul {
+  display: block;
+}
+
+nav.welcome-page a[arial-label]::after {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 0px;
+  position: relative;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #fff;
+}
+
+nav.welcome-page::after {
+  content: '';
+  display: block;
 }
 
 /* Navigation */
@@ -89,7 +146,6 @@ nav ul li a {
   padding: 7px 10px;
   text-decoration: none;
   width: auto;
-  font-weight: bolder;
   position: relative;
   text-transform: uppercase;
   font-size: 12px;
@@ -137,104 +193,38 @@ nav > ul > li {
   float: left;
 }
 
-/* Index Navigation */
-
-nav.index-page {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  padding: 150px 0 0 0;
-  width: 100%;
-}
-
-nav.index-page a[arial-label]::after {
-  content: '';
-  display: block;
-  width: 0px;
-  height: 0px;
-  position: relative;
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  border-top: 4px solid #fff;
-}
-
-nav.index-page::after {
-  content: '';
-  display: block;
-}
-
-nav.index-page ul {
-  list-style: none;
-  position: relative;
-  margin: 0px;
-  padding: 0px;
-}
-
-nav.index-page ul li a {
-  display: inline-block;
-  color: #fff;
-  text-decoration: none;
-  padding: 7px 10px;
-  width: 100px;
-}
-
-nav.index-page ul li a:hover {
-  color: #ACFF50;
-}
-
-nav.index-page > ul {
-  margin-left: 33%;
-}
-
-nav.index-page > ul > li {
-  float: left;
-}
-
-nav.index-page > ul > li > a {
-  width: auto;
-}
-
-nav.index-page ul ul {
-  display: none;
-}
-
-nav.index-page ul li:hover > ul {
-  display: block;
-}
-
 /* Main section */
 
 section.main {
   position: relative;
   height: 430px;
-  background: url(lines.png) no-repeat center bottom;
+  background: image-url('lines_1200px.png') no-repeat center center;
+  background-size: cover;
 }
 
-
-section.main h1 {
-  margin-left: 35px;
+.welcome-h1 {
   padding-top: 60px;
+  width: 100%;
+  text-align: center;
+}
+
+.welcome-h1 h1 {
   font-size: 3em;
   font-weight: 700;
   line-height: 1;
+  text-transform: uppercase;
+}
+
+.get-started {
+  width: 100%;
+  padding-top: 50px;
+  display: block;
+  margin: 0 auto;
   text-align: center;
-  text-transform: uppercase;
 }
 
-p.login {
-  margin-left: 30px;
-  padding-top: 25px;
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: .5px;
-  text-transform: uppercase;
-}
-
-section a.btn {
-  position: absolute;
-  top: 60%;
-  left: 41%;
-  font-weight: bold;
+.get-started a.btn {
+  margin-top: 30px;
   background-color: #ACFF60;
   padding: 10px 25px;
   text-decoration: none;
@@ -245,9 +235,18 @@ section a.btn {
   transition: background-color .5s;
 }
 
-section a.btn:hover, .sign-in:hover {
-  background-color: rgba(172,255,96,.8);
+.get-started a.btn:hover {
+  background-color: rgba(172,255,96,.6);
   color: white;
+}
+
+p.login {
+  margin-left: 30px;
+  padding-top: 25px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: .5px;
+  text-transform: uppercase;
 }
 
 /* Registration form */
@@ -422,6 +421,11 @@ input.sign-in {
   left: -480px;
   letter-spacing: .5px;
   transition: background-color .5s;
+}
+
+.sign-in:hover {
+  background-color: rgba(172,255,96,.8);
+  color: white;
 }
 
 input.sign-in:hover, .create:hover input, .actions:hover input {
