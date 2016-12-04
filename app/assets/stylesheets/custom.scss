@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  width: 100%;
+  max-width: 100%;
   min-width: 980px;
   margin: 0;
   padding: 0;
@@ -15,8 +15,6 @@ body {
   font-size: 16px;
   font-weight: 500;
   color: #000;
-  max-width: 100%;
-  height: 100%;
 }
 
 p {
@@ -68,39 +66,46 @@ header a.logo {
 }
 
 /* Welcome Page Navigation */
-#navbar {
-  width: 100%;
-  height: 100px;
-}
 
 nav.welcome-page {
-  border: 2px solid pink;
-  height: 100px;
-  margin: 0 auto;
+  text-transform: uppercase;
+  width: 100%;
+  height: 200px;
 }
 
 nav.welcome-page > ul {
-  border: 2px solid blue;
-  height: 80px;
+  position: relative;
+  left: 35%;
+}
+
+nav.welcome-page ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav.welcome-page > ul > li {
+  display: block;
+  float: left;
 }
 
 nav.welcome-page ul li a {
+  width: auto;
   display: inline-block;
   color: #fff;
   text-decoration: none;
   padding: 7px 10px;
-  width: 100px;
+  font-size: 13px;
+  letter-spacing: .5px;
+  cursor: pointer;
 }
 
 nav.welcome-page ul li a:hover {
   color: #ACFF50;
 }
 
-nav.welcome-page > ul > li > a {
-  width: auto;
-}
-
 nav.welcome-page ul ul {
+  list-style: none;
   display: none;
 }
 
@@ -126,7 +131,7 @@ nav.welcome-page::after {
 
 /* Navigation */
 
-header.main nav {
+nav.app-navbar {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -134,13 +139,13 @@ header.main nav {
   width: 100%;
 }
 
-nav ul {
+nav.app-navbar ul {
   list-style: none;
   margin: 0px;
   padding: 0px;
 }
 
-nav ul li a {
+nav.app-navbar ul li a {
   display: inline-block;
   color: #fff;
   padding: 7px 10px;
@@ -148,8 +153,8 @@ nav ul li a {
   width: auto;
   position: relative;
   text-transform: uppercase;
-  font-size: 12px;
-  letter-spacing: -1;
+  font-size: 13px;
+  letter-spacing: .5px;
 }
 
 header.main nav ul li:last-child:hover {
@@ -157,7 +162,7 @@ header.main nav ul li:last-child:hover {
   width: 125px;
 }
 
-nav ul li a[arial-label]::after {
+nav.app-navbar ul li a[arial-label]::after {
   content: '';
   display: block;
   width: 0px;
@@ -168,28 +173,28 @@ nav ul li a[arial-label]::after {
   border-top: 4px solid #fff;
 }
 
-nav ul ul {
+nav.app-navbar ul ul {
   display: none;
 }
 
-nav ul li:hover > ul {
+nav.app-navbar ul li:hover > ul {
   display: block;
 }
 
-nav ul li a:visited {
+nav.app-navbar ul li a:visited {
   color: #fff;
 }
 
-nav ul li a:hover {
+nav.app-navbar ul li a:hover {
   color: #ACFF60;
 }
 
-nav > ul {
-  padding-left: 65%;
+nav.app-navbar > ul {
+  padding-left: 60%;
   z-index: 1;
 }
 
-nav > ul > li {
+nav.app-navbar > ul > li {
   float: left;
 }
 
