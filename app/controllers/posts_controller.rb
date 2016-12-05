@@ -81,6 +81,6 @@ class PostsController < ApplicationController
     def authorized_user
       @post = Post.find(params[:id])
       flash[:notice] = "You\'re not allowed to do that."
-      redirect_to(root_path) unless @post.author == current_user
+      redirect_to(root_path) unless current_user?(@post.author)
     end
 end
