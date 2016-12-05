@@ -157,7 +157,7 @@ nav.app-navbar ul li a {
 
 header.main nav ul li:last-child:hover {
   background-color: #000;
-  width: 125px;
+  width: auto;
 }
 
 nav.app-navbar ul li a[arial-label]::after {
@@ -177,6 +177,7 @@ nav.app-navbar ul ul {
 
 nav.app-navbar ul li:hover > ul {
   display: block;
+  width: 125px;
 }
 
 nav.app-navbar ul li a:visited {
