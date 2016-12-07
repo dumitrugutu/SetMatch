@@ -1,16 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 /* universal */
-html {
+html, body {
+  margin: 0;
+  padding: 0;
   height: 100%;
   width: 100%;
 }
 
 body {
-  max-width: 100%;
-  min-width: 980px;
-  margin: 0;
-  padding: 0;
+  min-width: 100%;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -346,7 +345,7 @@ p.login {
 }
 
 .form-fields textarea {
-  width: 440px;
+  width: 55%;
   height: 60px;
   margin-top: 5px;
   border: 1px solid #ACFF60;
