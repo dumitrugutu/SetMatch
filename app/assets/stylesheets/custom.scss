@@ -188,7 +188,7 @@ nav.app-navbar ul li a:hover {
 }
 
 nav.app-navbar > ul {
-  padding-left: 60%;
+  padding-left: 55%;
   z-index: 1;
 }
 
@@ -378,7 +378,6 @@ div.registration h1 {
 /* Sign in form */
 
 div.sign-in-form {
-  width: 100%;
   text-transform: uppercase;
   font-size: 12px;
   padding-left: 30px;
@@ -463,28 +462,30 @@ p.new-user a:hover {
 /* footer */
 
 footer {
-  font-size: .8em;
+  border-top: 1px solid #E0E0E0;
+  padding: 1em;
   margin: 40px 0 30px 0;
+  font-size: .8em;
   color: #777;
   text-align: center;
-  clear: both;
+  box-sizing: border-box;
 }
 
-footer .content {
-  display: inline;
+footer li, .content {
+  display: inline-block;
+  margin: 0 1em;
 }
 
 footer a {
-  margin-left: 30px;
+  text-decoration: none;
   color: #777;
+  padding: 1.5em;
 }
 
 footer a:visited {
-  margin-left: 30px;
   color: #777;
 }
 
 footer a:hover {
-  margin-left: 30px;
   color: #000;
 }
