@@ -4,7 +4,7 @@
 	<h1>Create profile</h1>
 	<%= form_for @user, html: { multipart: true } do |f| %>
 		<% if @user.errors.any? %>
-			<h3><%= pluralize(@user.errors.count, "error") %> prevented this post from saving!</h3>
+			<h3><%= pluralize(@user.errors.count, "error") %> prevented this profile from saving!</h3>
 			<% @user.errors.full_messages.each do |error| %>
 				<p><%= error %></p>
 			<% end %>

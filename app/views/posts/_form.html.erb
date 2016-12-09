@@ -1,0 +1,24 @@
+<div class="col-sm-8">
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+</div>
+
+<div class="row">
+    <%= f.label "Description" %>
+    <%= f.text_area :body, size: "40x5" %>
+</div>
+
+<div class="col-xs-4">
+  <%= f.label :date %>
+  <%= f.date_field :date %>
+</div>
+
+<div class="col-xs-4">
+  <%= f.label :start_time %>
+  <%= f.time_field :start_time %>
+</div>
+
+<div class="col-xs-4">
+  <%= f.label :end_time %>
+  <%= f.time_field :end_time %>
+</div>

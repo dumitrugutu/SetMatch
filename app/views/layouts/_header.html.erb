@@ -1,7 +1,7 @@
 <header class="main">
-  <div>
-    <span><%= link_to "", root_path, class: "main-logo", alt: "SetMatch" %></span>
-    <nav>
+  <span><%= link_to "", root_path, class: "main-logo", alt: "SetMatch" %></span>
+  <div class="app-navigation">
+    <nav class="app-navbar">
       <ul>
         <% if logged_in? %>
           <li><%= link_to "Home", root_path %></li>

@@ -1,0 +1,69 @@
+<div class="avatar">
+  <div class="image"></div>
+  <div class="upload">
+    <%= f.file_field :image %>
+  </div>
+</div>
+
+<div class="form-fields">
+  <div class="top">
+    <div class="fullname">
+      <%= f.label "full name" %><br>
+      <%= f.text_field :fullname, required: "required" %>
+    </div>
+
+    <div class="reg-email">
+      <%= f.label :email %><br>
+      <%= f.email_field :email, required: "required" %>
+    </div>
+
+    <div class="reg-password">
+      <%= f.label :password %><br>
+      <%= f.password_field :password, required: "required"  %>
+    </div>
+
+    <div class="screen_name">
+      <%= f.label :screen_name %><br>
+      <%= f.text_field :screen_name %>
+    </div>
+</div>
+
+<div class="bio">
+  <%= f.label :bio %>
+  <%= f.text_area :bio %>
+</div>
+
+<div class="middle">
+  <div class="rating">
+    <%= f.label :rating %>
+    <%= f.text_field :rating %>
+  </div>
+
+  <div class="zipcode">
+    <%= f.label :zipcode %>
+    <%= f.text_field :zipcode, required: "required"  %>
+  </div>
+
+  <div class="age">
+    <%= f.label :age %>
+    <%= f.text_field :age %>
+  </div>
+</div>
+
+<div class="bottom">
+  <div class="gender">
+    <%= f.label :gender %><br>
+    <%= radio_button_tag(:gender, "Female") %>
+    <%= label_tag "Female" %>
+    <%= radio_button_tag(:gender, "Male") %>
+    <%= label_tag "Male" %>
+    <%= radio_button_tag(:gender, "Other") %>
+    <%= label_tag "Other" %>
+  </div>
+  <!-- <%= select_tag(:gender, options_for_select([['Male'], ['Female'], ['Other']], selected: :option )) %> -->
+
+  <div class="handed">
+    <%= f.label :handed %><br>
+    <%= f.text_field :handed%>
+  </div>
+</div>
