@@ -2,4 +2,4 @@
 
 Work in progress...
 
-visit [setmatch](setmatch-junior.herokuapp.com)
+visit [setmatch](https://setmatch-junior.herokuapp.com/)
