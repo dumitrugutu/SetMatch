@@ -1,4 +1,4 @@
-dumitru = User.create!(email: "dumitrugutu@dbc.com", fullname: "Dumitru Gutu", screen_name: "zgleb", password: "password", zipcode: 60645, gender: "M")
+dumitru = User.create!(email: "dumitrugutu@dbc.com", fullname: "Dumitru Gutu", screen_name: "zgleb", password: "password", zipcode: 60645, gender: "M", bio: "Something about me", rating: 4, age: 28, handed: 1)
 kyriakos = User.create!(email: "kjkalpakidis@dbc.com", fullname: "Kyriakos Kalpakidis", screen_name: "trebuchet", password: "password", zipcode: 60635, gender: "M")
 andrew = User.create!(email: "andrewjung@dbc.com", fullname: "Andrew Jung", screen_name: "sweetpotatoe", password: "password", zipcode: 60601, gender: "M")
 will = User.create!(email: "willjung@dbc.com", fullname: "William Jung", screen_name: "willimnot", password: "password", zipcode: 60635, gender: "M")
