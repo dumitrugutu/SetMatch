@@ -33,12 +33,12 @@ ActiveRecord::Schema.define(version: 20161128235949) do
     t.string   "fullname",           null: false
     t.string   "screen_name",        null: false
     t.string   "password_digest",    null: false
-    t.text     "bio"
-    t.integer  "rating"
-    t.integer  "zipcode"
-    t.integer  "age"
-    t.string   "gender"
-    t.integer  "handed"
+    t.text     "bio",                null: false
+    t.integer  "rating",             null: false
+    t.integer  "zipcode",            null: false
+    t.integer  "age",                null: false
+    t.string   "gender",             null: false
+    t.integer  "handed",             null: false
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.string   "remember_digest"
