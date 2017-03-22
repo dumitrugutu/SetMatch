@@ -1,28 +1,37 @@
 <%= render 'layouts/header' %>
 
-<div class="search-posts">
-  <%= search_form_for @search do |f| %>
-     <div class="field">
-         <%= f.label :title_cont, "User contains" %>
-         <%= f.text_field :title_cont %>
-     </div>
-
-     <div class="actions"><%= f.submit "Search" %></div>
-  <% end %>
-</div>
-
-<div class="show-posts">
-  <div class="post-container">
-    <% @all_posts.each do |post| %>
-      <div class="author-profile">
-        <%= image_tag post.author.image.url(:medium) %>
-        <p><%= link_to post.author.fullname, user_path(post.author) %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1 col-sm-8 col-sm-offset-2">
+      <div class="search-posts">
+        <%= search_form_for @search, class: "form-inline" do |f| %>
+           <div class="form-group">
+               <%= f.label :title_cont, "Find players" %>
+               <%= f.text_field :title_cont, class: "form-control" %>
+           </div>
+           <div class="form-group"><%= f.submit "Search", class: "btn" %></div>
+        <% end %>
       </div>
-      <div class="post-details">
-        <h2><%= link_to post.title, post_path(post) %></h2><span>- created <%= time_ago_in_words(post.created_at) %> ago</span>
-        <!-- brakes long paragraphs at specified length -->
-        <p><%= truncate(post.body, length: 250) %></p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
+      <div class="show-posts">
+        <div class="post-container">
+          <% @all_posts.each do |post| %>
+          <div class="author-profile">
+            <%= image_tag post.author.image.url(:medium) %>
+            <p><%= link_to post.author.fullname, user_path(post.author) %></p>
+          </div>
+          <div class="post-details">
+            <h2><%= link_to post.title, post_path(post) %></h2><span>- created <%= time_ago_in_words(post.created_at) %> ago</span>
+            <!-- brakes long paragraphs at specified length -->
+            <p><%= truncate(post.body, length: 250) %></p>
+          </div>
+          <% end %>
+        </div>
       </div>
-    <% end %>
+    </div>
   </div>
 </div>
