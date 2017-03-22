@@ -1,3 +1,5 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 /* universal */
@@ -447,6 +449,13 @@ p.new-user a {
 
 p.new-user a:hover {
   color: #0E91BF;
+}
+
+// Search Posts
+
+.search-posts {
+  padding: 50px;
+  text-align: center;
 }
 
 /* Flash notice */
